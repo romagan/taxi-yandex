@@ -1,0 +1,239 @@
+.reviews__left {
+	background-color: $gray-lighter;
+}
+
+.reviews__title {
+	@include mobile-title-font;
+
+	margin: 0;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.reviews__left-image {
+	width: 129px !important;
+	height: 129px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+
+	border-radius: 50%;
+	background-color: #8b5a54;
+}
+
+.reviews__text {
+	margin: 0;
+	padding: 0 30px;
+	padding-bottom: 90px;
+
+	font-weight: 300;
+}
+
+.reviews__right {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	background-color: $gray-darken;
+}
+
+.reviews__right-image {
+	width: 205px;
+	height: 205px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+
+	border-radius: 50%;
+	background-color: #eaebf0;
+}
+
+.reviews__phone-link {
+	position: relative;
+
+  display: block;
+	margin-bottom: 20px;
+	margin-left: 30px;
+
+	font-size: 30px;
+	line-height: 30px;
+	color: $text-color;
+	font-weight: 700;
+	white-space: nowrap;
+
+	&:hover {
+		color: $yellow;
+
+		transition: 0.5s ease;
+	}
+
+	&:active,
+	&:focus {
+		color: $label;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -30px;
+
+		width: 30px;
+		height: 30px;
+
+		background-image: url("../img/icon-mobile-phone.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+}
+
+.reviews__add {
+	font-size: 18px;
+	text-transform: none;
+}
+
+.owl-nav {
+	position: absolute;
+	bottom: 35px;
+	left: 40%;
+	right: 40%;
+
+	display: flex !important;
+	justify-content: space-between;
+
+	font-size: 60px;
+	line-height: 30px;
+	color: $text-color;
+	font-weight: 300;
+}
+
+.owl-prev,
+.owl-next {
+
+	&:hover span {
+		color: $yellow;
+
+		transition: 0.5s ease;
+	}
+
+	&:active span,
+	&:focus span {
+		color: $label;
+	}
+}
+
+@media (min-width: $mobile-width) and (max-width: $tablet-width - 1px) {
+
+	.owl-carousel.owl-drag .owl-item {
+		user-select: text !important;
+		touch-action: auto !important;
+	}
+}
+
+@media (min-width: $tablet-width) {
+
+	.reviews {
+		display: flex;
+	}
+
+	.reviews__left {
+		width: 50%;
+	}
+
+	.reviews__title {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.reviews__text {
+		padding: 0 30px;
+		padding-bottom: 70px;
+	}
+
+	.owl-nav {
+		bottom: 20px;
+	}
+
+	.reviews__right {
+		justify-content: center;
+		width: 50%;
+		padding-top: 0;
+	}
+}
+
+@media (min-width: $desktop-width) {
+
+	.reviews__title {
+		@include desktop-title-font;
+
+		padding-top: 125px;
+		padding-bottom: 75px;
+
+		text-transform: uppercase;
+		font-weight: 300;
+	}
+
+	.reviews__carousel {
+		cursor: pointer;
+	}
+
+	.reviews__text {
+		padding-bottom: 180px;
+	}
+
+	.owl-nav {
+		bottom: 100px;
+	}
+
+	.reviews__phone-link {
+		margin-left: 0;
+	}
+}
+
+@media (min-width: $xl-width) {
+
+	.reviews__left {
+		padding-bottom: 180px;
+	}
+
+	.reviews__carousel-item {
+		display: flex;
+		width: 60%;
+		margin: 0 auto;
+	}
+
+	.reviews__left-image {
+		align-self: center;
+	}
+
+	.reviews__text {
+		padding-bottom: 0;
+	}
+
+	.reviews__carousel-item {
+		position: relative;
+	}
+
+	.owl-nav {
+		bottom: 50%;
+		left: 10%;
+		right: 10%;
+		transform: translateY(50%);
+	}
+
+	.reviews__right {
+		flex-direction: row;
+		justify-content: center;
+		padding-bottom: 0;
+	}
+
+	.reviews__right-image {
+		margin: 0;
+		margin-right: 50px;
+	}
+
+	.reviews__phone-link {
+		margin-bottom: 35px;
+	}
+}

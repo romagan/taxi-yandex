@@ -1,0 +1,22 @@
+@mixin list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin mobile-title-font {
+	padding: 0 10px;
+	
+	font-size: $mobile-title-font;
+	line-height: $mobile-title-lineheight;
+	font-weight: 300;
+	text-align: center;
+}
+
+@mixin desktop-title-font {
+	padding: 0 30px;
+	
+	font-size: $desktop-title-font;
+	line-height: $desktop-title-lineheight;
+}

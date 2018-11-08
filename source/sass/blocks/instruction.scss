@@ -1,0 +1,286 @@
+.instruction {
+	margin-bottom: 30px;
+}
+
+.instruction__left {
+	margin-bottom: 20px;
+}
+
+.instruction__title {
+	@include mobile-title-font;
+
+	margin: 0;
+}
+
+.instruction__steps {
+	@include mobile-title-font;
+
+	margin: 0;
+	margin-bottom: 10px;
+
+	font-weight: 500;
+}
+
+.instruction__download {
+	font-size: 18px;
+	line-height: 24px;
+	text-transform: none;
+
+	&:hover {
+		background-color: $gray-darken;
+
+		transition: 0.5s ease;
+	}
+
+	&:active,
+	&:focus {
+		opacity: 0.6;
+	}
+}
+
+.instruction__video {
+	width: 100%;
+	height: auto;
+	margin-bottom: 30px;
+
+	object-fit: inherit;
+
+	background-color: $label;
+}
+
+.instruction__list {
+	@include list;
+}
+
+.instruction__step {
+	position: relative;
+
+	margin-bottom: 100px;
+	padding-top: 100px;
+
+	font-weight: 300;
+	text-align: center;
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -70px;
+		right: 50%;
+
+		width: 60px;
+		height: 20px;
+
+    background-image: url("../img/icon-arrow-right.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+
+		transform: translateX(50%) rotate(90deg);
+	}
+
+	&:last-child::after {
+		display: none;
+	}
+}
+
+.instruction__step--1 {
+	background-image: url("../img/step-1.svg");
+}
+
+.instruction__step--2 {
+	background-image: url("../img/step-2.svg");
+}
+
+.instruction__step--3 {
+	background-image: url("../img/step-3.svg");
+	background-position: center 30px;
+}
+
+.instruction__request {
+	max-width: 250px;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-right: 5px;
+	padding-left: 5px;
+
+	font-size: 18px;
+	line-height: 24px;
+	text-transform: none;
+
+	&:hover {
+		background-color: $gray-darken;
+
+		transition: 0.5s ease;
+	}
+
+	&:active,
+	&:focus {
+		opacity: 0.6;
+	}
+
+	input {
+		display: none;
+	}
+}
+
+@media (min-width: $tablet-width) {
+
+	.instruction {
+		margin-bottom: 50px;
+	}
+
+	.instruction__download {
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 30px;
+	}
+
+	.instruction__video {
+		margin-bottom: 50px;
+	}
+
+	.instruction__list {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.instruction__step {
+		width: 33%;
+		margin-bottom: 0;
+
+		background-position: top center;
+
+		&::after {
+			top: 25px;
+			right: -40px;
+
+			transform: translateX(0) rotate(0deg);
+		}
+	}
+
+	.instruction__step--1 {
+		padding-top: 115px;
+	}
+
+	.instruction__step--2 {
+		padding-top: 115px;
+	}
+
+	.instruction__request {
+		width: 100%;
+		margin-top: 0;
+		padding-right: 18px;
+	  padding-left: 18px;
+	}
+}
+
+@media (min-width: $desktop-width) {
+
+	.instruction {
+		margin-bottom: 100px;
+	}
+
+	.instruction > .container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding: 0 20%;
+	}
+
+	.instruction__left {
+		width: 50%;
+		margin-bottom: 0;
+	}
+
+	.instruction__title {
+		@include desktop-title-font;
+
+		padding: 0;
+
+		text-align: left;
+		white-space: nowrap;
+	}
+
+	.instruction__steps {
+		@include desktop-title-font;
+
+		margin-bottom: 30px;
+		padding: 0;
+
+		text-align: left;
+	}
+
+	.instruction__download {
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+
+	.instruction__right {
+		width: 50%;
+		margin-bottom: 100px;
+	}
+
+	.instruction__video {
+		height: 250px;
+		margin-bottom: 0;
+	}
+
+	.instruction__step {
+		width: 200px;
+		padding-top: 170px;
+
+		background-size: 100px;
+
+		&::after {
+			top: 35px;
+			right: -30%;
+		}
+	}
+
+	.instruction__step--1 {
+		padding-top: 183px;
+	}
+
+	.instruction__step--2 {
+		padding-top: 183px;
+	}
+}
+
+@media (min-width: $xl-width) {
+
+	.instruction__left {
+		width: 40%;
+	}
+
+	.instruction__title {
+		padding-top: 100px;
+	}
+
+	.instruction__right {
+		display: flex;
+		flex-direction: column;
+		width: 60%;
+	}
+
+	.instruction__video {
+		height: 320px;
+		margin-bottom: 30px;
+	}
+
+	.instruction__step {
+
+		&::after {
+			right: -50%;
+		}
+	}
+}

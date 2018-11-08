@@ -1,0 +1,394 @@
+.proposal {
+	margin-bottom: 30px;
+}
+
+.proposal__yourself {
+	margin-bottom: 30px;
+
+  box-shadow: 0px 5px 50px 0px rgba(54, 54, 54, 0.2);
+  border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.proposal__yourself-image {
+	display: block;
+	width: 100%;
+
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color: #f5efe1;
+}
+
+.proposal__yourself-wrapper {
+	padding-bottom: 30px;
+
+	background-color: $yellow;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.proposal__yourself-title {
+	@include mobile-title-font;
+
+	margin: 0;
+	padding-bottom: 30px;
+	padding-top: 30px;
+
+	font-weight: 500;
+}
+
+.proposal__yourself-description {
+	margin: 0;
+	margin-bottom: 10px;
+
+	text-align: center;
+}
+
+.proposal__yourself-button {
+	width: 90%;
+	margin: 0 auto;
+
+	font-size: 18px;
+	text-transform: none;
+
+	background-color: #ffffff;
+
+	&:hover {
+		background-color: $gray-darken;
+	}
+}
+
+//FORM
+
+.proposal__send {
+	padding-bottom: 30px;
+
+	box-shadow: 0px 5px 50px 0px rgba(54, 54, 54, 0.2);
+	border-radius: 5px;
+}
+
+.proposal__form {
+	padding: 0 25px;
+}
+
+.proposal__form-title {
+	@include mobile-title-font;
+	
+	margin: 0;
+	padding: 0;
+	padding-top: 30px;
+	padding-bottom: 10px;
+
+	letter-spacing: 0.035em;
+	font-weight: 400;
+}
+
+.proposal__form-description {
+	margin: 0;
+	padding-bottom: 30px;
+
+	text-align: center;
+	letter-spacing: 0.035em;
+}
+
+.proposal__form-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.proposal__label {
+	position: relative;
+
+	color: $label;
+	letter-spacing: 0.035em;
+}
+
+.proposal__input {
+	margin-bottom: 5px;
+	padding: 12px;
+	box-sizing: border-box;
+
+	font: inherit;
+	color: $text-color;
+	letter-spacing: 0.035em;
+
+	border: 2px solid $gray-form;
+	border-radius: 5px;
+	background-color: transparent;
+}
+
+.proposal__label--privacy {
+	padding-left: 30px;
+
+	font-size: 14px;
+	line-height: 24px;
+
+	cursor: pointer;
+}
+
+.proposal__input--checkbox + .proposal__label--privacy::before {
+	content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid $gray-form;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.proposal__input--checkbox:checked + .proposal__label--privacy::after {
+	content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+
+  width: 16px;
+  height: 16px;
+
+  background-image: url("../img/icon-checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  background-color: transparent;
+}
+
+.proposal__privacy-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.proposal__privacy-link {
+	color: #2a39f2;
+
+	&:hover {
+		opacity: 0.8;
+		transition: 0.4s ease;
+	}
+
+	&:active,
+	&:focus {
+		opacity: 0.6;
+	}
+}
+
+.proposal__button {
+	font-size: 18px;
+	line-height: 24px;
+	text-transform: none;
+
+	&:hover {
+		background-color: $gray-darken;
+	}
+}
+
+@media (min-width: $tablet-width) {
+
+	.proposal {
+		margin-bottom: 50px;
+	}
+
+	.proposal__yourself {
+		display: flex;
+		margin-bottom: 50px;
+
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 10px;
+	}
+
+	.proposal__yourself-image {
+		width: 50%;
+		height: 300px;
+
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 5px;
+	}
+
+	.proposal__yourself-wrapper {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+
+	.proposal__yourself-title {
+		padding-top: 50px;
+		padding-left: 7%;
+		padding-right: 0;
+
+		text-align: left;
+	}
+
+	.proposal__yourself-description {
+		align-self: center;
+		width: 100%;
+		margin-bottom: 0;
+		padding-left: 7%;
+		box-sizing: border-box;
+
+		text-align: left;
+	}
+
+	.proposal__yourself-button {
+		margin-top: auto;
+	}
+
+	//FORM
+
+	.proposal__send {
+		padding-bottom: 50px;
+	}
+
+	.proposal__form {
+		padding: 0 30px;
+	}
+
+	.proposal__form-title {
+		padding-top: 50px;
+	}
+}
+@media (min-width: $desktop-width) {
+
+	.button-round {
+		display: flex;
+	}
+
+	.proposal {
+		margin-bottom: 100px;
+	}
+
+	.proposal > .container {
+		padding: 0 20%;
+	}
+
+	.proposal__yourself {
+		margin-bottom: 133px;
+	}
+
+	.proposal__yourself-image {
+		width: 457px;
+		height: 460px;
+	}
+
+	.proposal__yourself-wrapper {
+		flex-grow: 1;
+	}
+
+	.proposal__yourself-title {
+		font-size: 30px;
+		line-height: 34px;
+		
+		padding-left: 6%;
+		padding-top: 80px;
+		padding-bottom: 40px;
+	}
+
+	.proposal__yourself-description {
+		padding-left: 6%;
+		padding-bottom: 80px;
+	}
+
+	.proposal__yourself-button {
+		width: 230px;
+		margin-left: 6%;
+		margin-top: 0;
+	}
+
+	//FORM
+
+	.proposal__send {
+		padding-bottom: 80px;
+	}
+
+	.proposal__form {
+		padding: 0 80px;
+	}
+
+	.proposal__form-title {
+		@include desktop-title-font;
+		padding-top: 70px;
+		padding-left: 0;
+		padding-bottom: 25px;
+
+		font-weight: 300;
+		text-align: left;
+	}
+
+	.proposal__form-description {
+		padding-bottom: 40px;
+
+		text-align: left;
+	}
+
+	.proposal__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.proposal__form-wrapper {
+		width: 48%;
+		margin-bottom: 40px;
+	}
+
+	.proposal__label {
+		padding-bottom: 15px;
+	}
+
+	.proposal__input {
+		margin-bottom: 25px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.proposal__privacy-wrapper {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.proposal__label--privacy {
+		width: 55%;
+		padding-left: 40px;
+		padding-bottom: 0;
+	}
+
+	.proposal__input--checkbox + .proposal__label--privacy::before {
+		width: 26px;
+		height: 26px;
+	}
+
+	.proposal__input--checkbox:checked + .proposal__label--privacy::after {
+		width: 26px;
+		height: 26px;
+	}
+
+	.proposal__button {
+		width: 230px;
+		max-height: 52px;
+		margin-right: 2.5%;
+	}
+}
+
+@media (min-width: $xl-width) {
+
+	.proposal__yourself-title {
+		font-size: 40px;
+		line-height: 48px;
+		
+		padding-left: 12%;
+	}
+
+	.proposal__yourself-description {
+		padding-left: 12%;
+	}
+
+	.proposal__yourself-button {
+		margin-left: 12%;
+	}
+}

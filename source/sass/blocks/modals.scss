@@ -1,0 +1,301 @@
+.popup-wrapper {
+	position: fixed;
+  z-index: -1;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.popup-wrapper--show {
+  z-index: 200;
+
+  opacity: 0.9;
+  background-color: #dddddd;
+}
+
+/* popup */
+
+.popup {
+  transition: display 1s ease;
+  position: fixed;
+  z-index: 300;
+  left: 50%;
+  top: 50%;
+
+  display: none;
+	flex-direction: column;
+  padding: 30px;
+  width: 260px;
+  margin: 0 auto;
+
+  color: $text-color;
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+
+  transform: translate(-50%, -50%);
+}
+
+.popup--show {
+	display: flex;
+}
+
+.popup__title {
+	margin: 0;
+	margin-bottom: 10px;
+
+	text-align: center;
+}
+
+.popup__description {
+	margin: 0;
+	margin-bottom: 10px;
+
+	text-align: center;
+}
+
+.popup__form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.popup__input {
+  margin-bottom: 20px;
+	padding: 10px;
+
+	font: inherit;
+	color: $text-color;
+	border: 1px solid $gray-form;
+  border-radius: 5px;
+	background-color: transparent;
+}
+
+.popup__file-wrapper {
+  margin-bottom: 20px;
+
+  label {
+    margin-right: 10px;
+    padding: 3px 5px;
+
+    color: $text-color;
+
+    border: 1px solid $gray-form;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {      
+      color: $yellow;
+
+      transition: 0.4s ease;
+    }
+    
+    &:active,
+    &:focus {
+      opacity: 0.6;
+    }
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.popup__link {
+	margin-bottom: 20px;
+  padding: 10px 0;
+
+  font-size: 18px;
+  line-height: 24px;
+	color: $text-color;
+  text-transform: none;
+
+	background-color: $yellow;
+
+  &:hover {
+    background-color: $gray-darken;
+
+    transition: 0.5s ease;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+.popup__privacy {
+  display: block;
+
+  color: $text-color;
+  text-align: center;
+}
+
+.popup__privacy-link {
+  color: #000000;
+  text-decoration: underline;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.4s ease;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+.popup__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+  width: 22px;
+  height: 22px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: 0;
+
+  cursor: pointer;
+
+  &:hover::before,
+  &:hover::after {
+    background-color: $yellow;
+
+    transition: 0.5s ease;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.2;
+  }
+}
+
+.popup__close::before,
+.popup__close::after {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  left: 2px;
+
+  width: 19px;
+  height: 3px;
+
+  background-color: #000000;
+}
+
+.popup__close::before {
+  transform: rotate(45deg);
+}
+
+.popup__close::after {
+  transform: rotate(-45deg);
+}
+
+//GAIN POPUPS
+
+.gain__popup {
+  padding: 10px;
+}
+
+.gain__popup-title {
+  margin: 0;
+  margin-bottom: 10px;
+
+  text-align: center;
+}
+
+.gain__popup-list {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.gain__popup-item {
+  font-size: 14px;
+  line-height: 24px;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.gain__popup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gain__popup-input {
+  width: 80%;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  font: inherit;
+  color: $text-color;
+  border: 1px solid $gray-form;
+  border-radius: 5px;
+  background-color: $gray-form;
+}
+
+.gain__popup-link {
+  width: 80%;
+  padding: 10px 0;
+
+  font-size: 16px;
+  text-transform: none;
+
+  &:hover {
+    background-color: $gray-darken;
+
+    transition: 0.5s ease;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: $tablet-width) {
+
+	.popup {
+		width: 354px;
+	}
+
+  .gain__popup {
+    padding: 30px;
+  }
+
+  .gain__popup-title {
+    margin-bottom: 30px;
+  }
+
+  .gain__popup-list {
+    margin-bottom: 30px;
+  }
+
+  .gain__popup-item {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+
+  .gain__popup-form {
+    flex-direction: row;
+  }
+
+  .gain__popup-input {
+    width: 95%;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .gain__popup-link {
+    flex-grow: 1;
+  }
+}
